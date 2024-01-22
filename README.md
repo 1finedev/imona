@@ -14,23 +14,17 @@ To set up this project locally, follow these instructions:
 4. Create a `.env` file in the root directory of the project and add the following line:
 
 ```shellscript
-NEXT_PUBLIC_API_URL="https://reqres.in/api/users"
+NEXT_PUBLIC_API_URL="https://reqres.in/api"
 ```
 
 To run the development server, use the following command:
 
 `npm run dev`
-
-# or
-
+or
 `yarn dev`
-
-# or
-
+or
 `pnpm dev`
-
-# or
-
+or
 `bun dev`
 
 Then, open `http://localhost:3000` with your browser to see the result.

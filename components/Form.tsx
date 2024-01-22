@@ -47,7 +47,7 @@ const Form = () => {
     setLoading(true);
     // Send the data using the POST method
     try {
-      const response = await fetch('process.env.NEXT_PUBLIC_API_URL/users', {
+      const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -62,6 +62,8 @@ const Form = () => {
       const data = await response.json();
       setData(data);
     } catch (error) {
+      // errors would be handled better in a bigger project
+      // for now logging errors
       console.error(error);
     }
     setLoading(false);

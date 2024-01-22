@@ -16,18 +16,17 @@ const Modal = ({
   const fetchSingleUser = async () => {
     try {
       const response = await fetch(
-        `process.env.NEXT_PUBLIC_API_URL/users/${userId}`
+        `${process.env.NEXT_PUBLIC_API_URL}/users/${userId}`
       );
       const userData = await response.json();
       setUser(userData?.data);
     } catch (error) {
+      // errors would be handled better in a bigger project
+      // for now logging errors
       console.error(error);
-      // handle error here
     }
     setLoading(false);
   };
-
-  console.log(user);
 
   useEffect(() => {
     // fetch the user data from the API

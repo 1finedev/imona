@@ -53,6 +53,7 @@ const UsersList = () => {
 
           {/* MODAL */}
           {currentUserId && (
+            // closing the modal by just clearing the current user id
             <Modal userId={currentUserId} closeModal={setCurrentUserId} />
           )}
         </div>
